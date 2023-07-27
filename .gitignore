@@ -1,0 +1,6 @@
+*/__pycache__
+ui_*
+*.qm
+build/
+dist/
+*.egg-info

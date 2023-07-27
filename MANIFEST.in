@@ -1,0 +1,2 @@
+recursive-include ScaleUp/gui *.ui
+include ScaleUp/i18n/*.ts

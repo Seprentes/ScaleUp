@@ -1,0 +1,7 @@
+[build-system]
+requires = [
+    "setuptools",
+    "av",
+    "python-realesrgan-ncnn-vulkan",
+    "PySide6"
+]
