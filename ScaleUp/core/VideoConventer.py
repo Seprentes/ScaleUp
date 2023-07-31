@@ -22,11 +22,18 @@ class VideoConventer:
 
         self._output_container = av.open(dest, mode="w")
 
-        self._output_video_stream = self._output_container.add_stream(dest_codec, rate=self._input_video_stream.average_rate)
+        self._output_video_stream = self._output_container.add_stream(
+            dest_codec,
+            rate=self._input_video_stream.average_rate
+        )
         self._output_video_stream.width = self.dest_width
         self._output_video_stream.height = self.dest_height
+        self._output_video_stream.bit_rate = self._input_video_stream.bit_rate
 
-        self._output_audio_stream = self._output_container.add_stream(dest_audio_codec, rate=self._input_audio_stream.average_rate) if self._input_audio_stream else None
+        self._output_audio_stream = self._output_container.add_stream(
+            dest_audio_codec,
+            rate=self._input_audio_stream.average_rate
+        ) if self._input_audio_stream else None
 
         self._update_status = update_status
 

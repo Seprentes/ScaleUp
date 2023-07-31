@@ -26,7 +26,7 @@
 &lt;h3&gt;ScaleUp Hakkında&lt;/h3&gt;
 &lt;p&gt;Telif hakkı (C) 2023 Özgür Ateş Fırat&lt;/p&gt;
 &lt;p&gt;ScaleUp, RealESRGAN yapay zekası ile videoların çözünürlüğünü daha yüksek hale getiren bir yazılımdır.&lt;/p&gt;
-&lt;p&gt;ScaleUp yapımında kullanılan bazı teknolojiler
+&lt;p&gt;ScaleUp yapımında kullanılan bazı teknolojiler:
 &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;https://doc.qt.io/qtforpython-6/index.html&quot;&gt;PySide6&lt;a/&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan&quot;&gt;Real-ESRGAN-ncnn-vulkan&lt;/a&gt;&lt;/li&gt;

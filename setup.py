@@ -37,7 +37,7 @@ class BuildCommand(build_py):
 
 setup(
     name="ScaleUp",
-    version="1.0.0",
+    version="1.0.1",
     description="Real-ESRGAN based video upscaler",
     author="Özgür Ateş Fırat",
     author_email="ozgurafirat@proton.me",

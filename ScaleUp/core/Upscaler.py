@@ -10,7 +10,7 @@ class Upscaler:
 
         self.scale = scale
 
-        self.upscaler = RealESRGAN(1)
+        self.upscaler = RealESRGAN()
         self.upscaler.load(parampath, modelpath)
         self.upscaler.scale = self.scale
 
