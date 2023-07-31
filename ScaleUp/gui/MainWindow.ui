@@ -31,7 +31,11 @@
     </widget>
    </item>
    <item>
-    <widget class="FileSelection" name="sourceFileSelection"/>
+    <widget class="FileSelection" name="sourceFileSelection">
+     <property name="existingFile">
+         <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QLabel" name="destinationLabel">

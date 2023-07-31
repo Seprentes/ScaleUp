@@ -9,16 +9,13 @@ class VideoConventer:
         self._input_audio_stream = self._input_container.streams.audio[0] if dest_audio_codec and self._input_container.streams.audio else None
 
         self._upscaler = upscaler
+        self.dest_width, self.dest_height = (
+            self._input_video_stream.width,
+            self._input_video_stream.height
+        )
         if upscaler:
-            self.dest_width, self.dest_height = (
-                self._input_video_stream.width * upscaler.scale,
-                self._input_video_stream.height * upscaler.scale
-            )
-        else:
-            self.dest_width, self.dest_height = (
-                self._input_video_stream.width,
-                self._input_video_stream.height
-            )
+            self.dest_width *= upscaler.scale
+            self.dest_height *= upscaler.scale
 
         self._output_container = av.open(dest, mode="w")
 
@@ -29,6 +26,9 @@ class VideoConventer:
         self._output_video_stream.width = self.dest_width
         self._output_video_stream.height = self.dest_height
         self._output_video_stream.bit_rate = self._input_video_stream.bit_rate
+
+        if upscaler:
+            self._output_video_stream.bit_rate *= upscaler.scale
 
         self._output_audio_stream = self._output_container.add_stream(
             dest_audio_codec,

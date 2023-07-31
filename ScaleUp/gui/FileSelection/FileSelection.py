@@ -15,9 +15,12 @@ class FileSelection(QFrame):
 
     def _file_selector(self, event):
         file_dialog = QFileDialog()
-        file_dialog.setFileMode(QFileDialog.ExistingFile if self._existing_file else QFileDialog.AnyFile)
 
-        file_path = file_dialog.getOpenFileName()[0]
+        file_path = ...
+        if self._existing_file:
+            file_path = file_dialog.getOpenFileName()[0]
+        else:
+            file_path = file_dialog.getSaveFileName()[0]
 
         if file_path:
             self.ui.lineEdit.setText(file_path)
